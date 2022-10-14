@@ -3,7 +3,7 @@
 class Bunga_model extends CI_Model
 {
 
-    private $table = "bunga";
+    private $table = "binatang";
 
     public function rules()
     {
@@ -19,12 +19,6 @@ class Bunga_model extends CI_Model
                 'label' => 'Warna',
                 'rules' => 'trim|required'
             ],
-
-            [
-                'field' => 'asal',
-                'label' => 'Asal',
-                'rules' => 'trim|required'
-            ]
         ];
     }
 
@@ -43,8 +37,7 @@ class Bunga_model extends CI_Model
         $post = $this->input->post();
         $data = [
             'nama'  => $post['nama'],
-            'warna' => $post['warna'],
-            'asal'  => $post['asal'],
+            'kategori' => $post['warna'],
         ];
         return $this->db->insert($this->table, $data);
     }
@@ -54,8 +47,7 @@ class Bunga_model extends CI_Model
         $post = $this->input->post();
         $data = [
             'nama'  => $post['nama'],
-            'warna' => $post['warna'],
-            'asal'  => $post['asal'],
+            'kategori' => $post['warna'],
         ];
         return $this->db->update($this->table, $data, ['id' => $id]);
     }

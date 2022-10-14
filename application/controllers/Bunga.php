@@ -11,7 +11,7 @@ class Bunga extends CI_Controller
 
     public function index()
     {
-        $data["title"] = "Data Bunga";
+        $data["title"] = "Data Binatang";
         $data["bunga"] = $this->Bunga_model->get();
         $this->load->view('header', $data);
         $this->load->view('bunga/index', $data);
@@ -28,7 +28,7 @@ class Bunga extends CI_Controller
             $this->session->set_flashdata('message', '<script> alert("Data Berhasil Disimpan"); </script>');
             redirect("bunga");
         }
-        $data["title"] = "Tambah Bunga";
+        $data["title"] = "Tambah Binatang";
         $this->load->view('header', $data);
         $this->load->view('bunga/add', $data);
         $this->load->view('footer');
@@ -49,7 +49,7 @@ class Bunga extends CI_Controller
                 $this->session->set_flashdata('message', '<script> alert("Data Berhasil Diupdate"); </script>');
                 redirect("bunga");
             } else {
-                $data["title"] = "Edit Bunga";
+                $data["title"] = "Edit Binatang";
                 $data["bunga"] = $bunga->edit($id);
 
                 if (!$data["bunga"]) {

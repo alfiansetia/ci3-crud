@@ -8,8 +8,7 @@
             <tr>
                 <th class="text-center">#</th>
                 <th>Nama</th>
-                <th>Warna</th>
-                <th>Asal</th>
+                <th>Kategori</th>
                 <th class="text-center">Aksi</th>
             </tr>
         </thead>
@@ -19,8 +18,7 @@
                 <tr>
                     <th class="text-center"><?= $row + 1 ?></th>
                     <td><?= $data->nama ?></td>
-                    <td><?= $data->warna ?></td>
-                    <td><?= $data->asal ?></td>
+                    <td><?= $data->kategori ?></td>
                     <td class="text-center">
                         <a href="<?= base_url('bunga/edit/' . $data->id) ?>" class="btn btn-warning btn-sm">Edit</a>
                         <a href="<?= base_url('bunga/destroy/' . $data->id) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete Data?');">Delete</a>
